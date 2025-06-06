@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+Homepage
+</title>
+
+<style>
+header{
+width:100%;
+height:50px;
+float:left;
+box-sizing:border-box;
+
+}
+
+body{
+padding:0px;
+margin:0;
+}
+
+#brand{
+padding:6px;
+margin:0;
+font-family:sans-serif;
+font-style:italic;
+float:left;
+border-color:blue;
+margin-left:20px
+
+}
+
+#tag_line{
+float:right;
+font-weight:bold;
+font-size:30px;
+padding:0px;
+margin:0;
+margin-top:10px;
+margin-right:10px
+}
+
+nav{
+width:100%;
+height:100px;
+float:left;
+box-sizing:border-box;
+background-color:red;
+padding:31px;
+}
+
+#search{
+font-size:20px;
+font-weight:bold;
+font-family:sans-serif;
+font-style:italic;
+width:400px;
+height:40px;
+float:left;
+box-sizing:border-box;
+border:none;
+padding:10px;
+}
+
+#submit{
+font-size:20px;
+font-weight:bold;
+font-family:sans-serif;
+font-style:italic;
+width:100px;
+height:40px;
+float:left;
+box-sizing:border-box;
+border:none;
+margin-left:3px;
+}
+
+#menu_table{
+width:600px;
+height:40px;
+float:right;
+box-sizing:border-box;
+}
+
+#menu{
+background-color:white;
+text-align:center;
+font-size:20px;
+font-weight:bold;
+width:10%;
+}
+
+a{
+text-decoration:none;
+color:black;
+}
+
+section{
+width:100%;
+height:1800px;
+float:left;
+box-sizing:border-box;
+border-color:red;
+border-style:solid;
+border-width:1px;
+padding:30px;
+}
+
+#location{
+font-weight:bold;
+font-size:20px;
+font-style:italic;
+float:left;
+padding:30px;
+}
+
+#contact{
+font-weight:bold;
+font-size:20px;
+font-style:italic;
+float:right;
+padding:30px;
+}
+
+#popular_tv{
+width:720px;
+height:550px;
+box-sizing:border-box;
+background-color:black;
+float:left;
+margin-left:30px;
+}
+
+#tony_tv{
+color:white;
+text-align:center;
+}
+
+#tv_images{
+width:300px;
+height:200px;
+margin:20px;
+padding-left:10px;
+ 
+}
+
+#rate_list_box{
+width:450px;
+width:450px;
+height:550px;
+box-sizing:border-box;
+float:right;
+margin-top:1px;
+}
+
+#tv_name{
+height:50px;
+background-color:black;
+color:white;
+text-align:center;
+font-weight:bold;
+font-size:25px;
+}
+
+#tv_price{
+height:50px;
+background-color:black;
+color:white;
+text-align:center;
+font-weight:bold;
+font-size:25px;
+}
+
+#tv_content{
+background-color:blue;
+}
+
+#t_name{
+font-weight:bold;
+font-style:italic;
+font-family:sans-serif;
+font-size:20px;
+padding:10px;
+border-bottom-width:2px;
+border-bottom-style:solid;
+border-bottom-color:white;
+color:white;
+}
+
+
+#rate{
+list-style:none;
+}
+
+fieldset{
+width:700px;
+height:570px;
+float:left;
+margin-top:50px;
+padding:10px;
+margin-left:25px;
+border-width:1px;
+border-style:solid;
+border-color:#ccc;
+
+}
+
+legend{
+font-family:snas-serif;
+font-size:30px;
+font-weight:bold;
+
+}
+
+#order_online{
+font-family:sans-serif;
+font-weight:bold;
+font-style:italic;
+font-size:20px;
+}
+
+#order_input{
+width:100%;
+height:35px;
+box-sizing:border-box;
+border-width:1px;
+border-style:solid;
+border-color:#ccc;
+margin-top:5px;
+}
+
+textarea{
+width:100%;
+height:100px;
+box-sizing:border-box;
+border-width:1px;
+border-style:solid;
+Border-color:#ccc;
+}
+
+#submit_button{
+padding:10px;
+margin-top:4px;
+font-size:20px;
+float:right;
+background-color:pink;
+}
+
+#about_us{
+height:570px;
+width:450px;
+box-sizing:border-box;
+float:right;
+border-width:1px;
+border-style:solid;
+border-color:#ccc;
+margin-top:64px;
+padding:20px;
+
+
+} 
+
+#about_title{
+font-family:sans-serif;
+font-size:30px;
+text-align:center;
+}
+
+#about_text{
+text-align:justify;
+font-family:sans-serif;
+font-style:bold;
+font-size:22px;
+line-height:27px;
+}
+
+#more_tv{
+float:left;
+width:100%;
+box-sizing:border-box;
+}
+
+#more_tv_text{
+text-align:center;
+font-family:century gothic;
+font-size:30px;
+}
+
+#mtv{
+width:218px;
+height:250px;
+border-width:1px;
+border-style:solid;
+border-color:#ccc;
+box-sizing:border-box;
+float:left;
+margin-right:75px;
+}
+
+#mtv_end{
+width:218px;
+height:250px;
+border-width:1px;
+border-style:solid;
+border-color:#ccc;
+box-sizing:border-box;
+float:left;
+}
+
+#tv_pic{
+width:180px;
+height:150px;
+margin:20px;
+}
+
+#buy{
+padding:10px;
+border-width:1px;
+border-style:solid;
+border-color:#ccc;
+margin-left:70px;
+background-color:blue;
+color:white;
+}
+
+#info{
+line-height:40px;
+margin-left:40px;
+}
+
+#cost_info{
+line-height:5px;
+font-size:20px;
+}
+
+footer{
+width:100%; 
+height:450px;
+box-sizing:border-box;
+background-color:black;
+float:left;
+}
+
+#contact_us{
+width:400px;
+height:250px;
+box-sizing:border-box;
+float:left;
+}
+
+#social_media{
+width:300px;
+height:250px;
+box-sizing:border-box;
+float:right;
+}
+
+#contact_text{
+color:white;
+font-size:30px;
+font-family:sans-serif;
+}
+
+#contact_details{
+color:white;
+line-height:32px;
+}
+
+#gif{
+width:186px;
+height:400px;
+box-sizing:border-box;
+float:left;
+padding:10px;
+margin-right:70px;
+
+}
+
+
+#about_me_text{
+font-size:17px;
+color:white;
+}
+
+</style>
+</head>
+<body>
+<header>
+<h1 id='brand'><font color='#1028e5'>GADA ELECTRONIC</font></h1>
+<p id='tag_line'>Best Deal on Best Brand</p>
+</header>
+<nav>
+<form>
+<input id='search' type='search' name='search' placeholder='Search Here...'>
+<input id='submit' type='submit' name='submit'>
+</form>
+
+
+<table id='menu_table'>
+<tr>
+<td id='menu'><a href='index.html'>Home</a></td>
+<td id='menu'><a href="mobile.html">Mobile</a></td>
+<td id='menu'><a href='laptop.html'>Laptop</a></td>
+<td id='menu'><a href='#tony_tv'>TV</a></td>
+<td id='menu'><a href='refrigerator.html'>Refrigerator</a><td>
+<td id='menu'><a href='ac.html'>Air Conditioner</a></td>
+<td id='menu'><a href="washing_machine.html">Washing Machine</a></td>
+<td id='menu'><a href='other_electronics.html'>Other electronics</a></td>
+<td id='menu'><a href="#about_title">About Us</a></td>
+<td id='menu'><a href='#contact_us'>Contact Us</a></td>
+ 
+</tr>
+</table>
+</nav>
+
+<section>
+<address id='location'>Address: 2, Chuim Village Rd, Khar, Union Park, Pali Hill, Mumbai, 
+Maharashtra 40005
+</address>
+<address id='contact'>Order Online: +91 7042834496,  +91 9810530805
+</address>
+
+<div id='popular_tv'>
+<h1 id='tony_tv'>Mobile phones</h1>
+<img src='p1.jpg' alt='Phone' id='tv_images'/>
+<img src='p2.jpg' alt='Phone' id='tv_images'/>
+<img src='p3.jpg' alt='Phone' id='tv_images'/>
+<img src='p4.jpg' alt='Phone' id='tv_images'/>
+</div>
+
+<table id='rate_list_box'>
+
+<tr>
+<td id='tv_name'>Mobiles</td>
+<td id='tv_price'>Price</td>
+</tr>
+
+<tr>
+<td id='tv_content'>
+<ol>
+<li id='t_name'>Redmi A4 5G</li>
+<li id='t_name'>Redmi 14C</li>
+<li id='t_name'>Galaxy M05</li>
+<li id='t_name'>Galaxy F05</li>
+<li id='t_name'>OnePlus 13R</li>
+<li id='t_name'>Samsung A55</li>
+<li id='t_name'>Samsung M06</li>
+<li id='t_name'>iPhone 16e</li>
+<li id='t_name'>iPhone 16 Pro Max</li>
+</ol>
+</td>
+
+<td id='tv_content'>
+<ol id='rate'>
+<li id='t_name'>&#8377;7,999 </li>
+<li id='t_name'>&#8377;11,498</li>
+<li id='t_name'>&#8377;6,249 </li>
+<li id='t_name'>&#8377;6,704 </li>
+<li id='t_name'>&#8377;42,999 </li>
+<li id='t_name'>&#8377;25,999 </li>
+<li id='t_name'>&#8377;8,499 </li>
+<li id='t_name'>&#8377;59,900</li>
+<li id='t_name'>&#8377;1,72,900</li>
+</ol>
+</td>
+</tr>
+
+
+</table>
+
+<fieldset id='form_box'>
+<legend>Order Online</legend>
+
+<form id='order_online'>
+Buyer Name
+<input type='text' name='name' value='name' placeholder='Enter Your Full Name...' pattern='[A-Za-z\s]+' title='Only alphabets
+allowed' id='order_input' required>
+<br><br>
+
+
+  <label for="countryCode">Country Code:</label>
+  <select id="countryCode" name="countryCode"   id='order_input' required>
+    <option value="+91">🇮🇳 India (+91)</option>
+    <option value="+1">🇺🇸 United States (+1)</option>
+    <option value="+44">🇬🇧 United Kingdom (+44)</option>
+    <option value="+61">🇦🇺 Australia (+61)</option>
+    <option value="+81">🇯🇵 Japan (+81)</option>
+    <option value="+49">🇩🇪 Germany (+49)</option>
+    <option value="+86">🇨🇳 China (+86)</option>
+    <option value="+33">🇫🇷 France (+33)</option>
+    <option value="+39">🇮🇹 Italy (+39)</option>
+    <option value="+7">🇷🇺 Russia (+7)</option>
+    <option value="+34">🇪🇸 Spain (+34)</option>
+    <option value="+55">🇧🇷 Brazil (+55)</option>
+    <option value="+27">🇿🇦 South Africa (+27)</option>
+    <option value="+82">🇰🇷 South Korea (+82)</option>
+    <option value="+65">🇸🇬 Singapore (+65)</option>
+    <option value="+60">🇲🇾 Malaysia (+60)</option>
+    <option value="+966">🇸🇦 Saudi Arabia (+966)</option>
+    <option value="+971">🇦🇪 UAE (+971)</option>
+    <option value="+62">🇮🇩 Indonesia (+62)</option>
+    <option value="+234">🇳🇬 Nigeria (+234)</option>
+    <option value="+20">🇪🇬 Egypt (+20)</option>
+    <option value="+351">🇵🇹 Portugal (+351)</option>
+    <option value="+48">🇵🇱 Poland (+48)</option>
+    <option value="+90">🇹🇷 Turkey (+90)</option>
+    <option value="+98">🇮🇷 Iran (+98)</option>
+    <option value="+977">🇳🇵 Nepal (+977)</option>
+    <option value="+880">🇧🇩 Bangladesh (+880)</option>
+    <option value="+94">🇱🇰 Sri Lanka (+94)</option>
+    <option value="+92">🇵🇰 Pakistan (+92)</option>
+    <option value="+66">🇹🇭 Thailand (+66)</option>
+    <!-- Add more as needed -->
+  </select>
+
+  <br><br>
+
+  <label for="phoneNumber">Mobile Number:</label>
+  <input
+    type="tel"
+    id="phoneNumber"
+    name="phoneNumber"
+    pattern="[0-9]{10}"
+    title="Enter a 10-digit mobile number"  id='order_input' 
+    required
+  >
+
+  <br><br>
+
+  
+
+
+<script>
+function validatePhoneNumber() {
+  const phoneInput = document.getElementById("phoneNumber").value;
+  const pattern = /^[0-9]{10}$/;
+
+  if (!pattern.test(phoneInput)) {
+    alert("Please enter exactly 10 digits for the mobile number.");
+    return false;
+  }
+  return true;
+}
+</script>
+
+
+Choose Phones
+<select name='choose_tv'  placeholder='Choose phone'  id='order_input'  required>
+<option name='Redmi A4 5G'>Redmi A4 5G</option>
+<option name='Redmi 14C'>Redmi 14C</option>
+<option name='Galaxy M05'>Galaxy M05</option>
+<option name='Galaxy F05'>Galaxy F05</option>
+<option name='OnePlus 13R'>OnePlus 13R</option>
+<option name='Samsung M06'>Samsung M06</option>
+<option name='iPhone 16e'>iPhone 16e</option>
+<option name='iPhone 16 Pro Max'>iPhone 16 Pro Max</option>
+<option name='Samsung A55'>Samsung A55</option>
+<option name='Tony55inches'>Samsung S25</option>
+<option name='Tony55inches'>realme NARZO 80</option>
+<option name='Tony55inches'>Motorola Edge 60</option>
+<option name='Tony55inches'>Nothing Phone 2a plus</option>
+<option name='Tony55inches'>Vivo X200 Pro 5G</option>
+
+</select>
+
+<br><br>
+Quantity
+<input type='text' name='quantity'  id='order_input'  required>
+<br><br>
+
+Address<br>
+<textarea name='address' value='address' placeholder="Please enter the address where you'd like your order to be delivered. 
+ " required ></textarea>
+ 
+<input type='submit' value='Order Now!' id='submit_button'>
+</form>
+</fieldset>
+
+<div id='about_us'>
+<h1  id='about_title'>About Us</h1>
+<hr>
+<p id='about_text'>Welcome to Gada Electronics – jahan har electronic item ke saath ek kahaani judi hoti hai! Shuruat hui ek choti si dukaan se, aur 
+bapuji ke aashirwad se itni badi sakh hui hai gada electronic ki dukan ki iss electronic market me jaha TVs, fridge, phones, laptop,
+ aur remote control se leke customer ke patience tak – sab kuch milta hai with A1 customer service Humein fakr hai ki hum sirf electronics nahi
+ bechte, hum purani yaadon aur naye innovations ka perfect short circuit banate hain. Toh aaiye, nostalgia ki is dukaan mein ek baar 
+ phir welcome – kyunki yahan har device ke saath milti hai ek hasi aur ek dosti!</p>
+
+</div>
+
+<div id='more_tv'>
+<h1 id='more_tv_text'>More Phones</h1>
+</div>
+
+<div id='mtv'>
+<img src='p5.jpg' id='tv_pic'>
+<a href='#form_box'><button id='buy'>Buy Now</button></a>
+<br><p id='info'>Samsung Galaxy S25</p>
+<pre id='cost_info'>       &#8377;1,29,999</pre>
+</div>
+
+<div id='mtv'>
+<img src='p6.jpg' id='tv_pic'>
+<a href='#form_box'><button id='buy'>Buy Now</button></a>
+<br><p id='info'>realme NARZO 80</p>
+<pre id='cost_info'>       &#8377;21,498</pre>
+</div>
+
+<div id='mtv'>
+<img src='p7.jpg' id='tv_pic'>
+<a href='#form_box'><button id='buy'>Buy Now</button></a>
+<br><p id='info'>Motorola Edge 60</p>
+<pre id='cost_info'>       &#8377;22,580</pre>
+</div>
+
+<div id='mtv'>
+<img src='p8.jpg' id='tv_pic'>
+<a href='#form_box'><button id='buy'>Buy Now</button></a>
+<br><p id='info'>Nothing Phone 2a plus</p>
+<pre id='cost_info'>       &#8377;20,180</pre>
+</div>
+
+<div id='mtv_end'>
+<img src='p9.jpg' id='tv_pic'>
+<a href='#form_box'><button id='buy'>Buy Now</Button></a>
+<br><p id='info'>Vivo X200 Pro 5G</p>
+<pre id='cost_info'>       &#8377;94,999</pre>
+</div>
+
+</section>
+
+<footer>
+<div id='contact_us'>
+<h1 id='contact_text'>Contact Us</h1><hr>
+<address id='contact_details'><b>Home Address:</b>C-259 Brij Vihar, Gzb,UP </address>
+<address id='contact_details'><b>Home Phone Number:</b>+91 7042834496</address>
+<address id='contact_details'><b>Shop Address:</b> 2, Chuim Village Rd, Khar, Union Park, Pali Hill, Mumbai, Maharashtra 40005</address>
+<address id='contact_details'><b>Shop Phone Number:</b>+91 9810530805</address>
+<address id='contact_details'><b>College Name:</b> Netaji Subhash University of Technology,</address>
+<address id='contact_details'><b>Disclaimer:</b> This platform is an unofficial simulation, neither affiliated with Gada Electronics nor any other electronic entity. It has been meticulously crafted solely for educational purposes, fostering knowledge and expertise.</address>
+</div>
+
+
+
+<center>
+<img src='ad3.gif' id='gif'>
+<img src='ad2.gif' id='gif'>
+<img src='ad1.gif' id='gif'>
+</center>
+
+
+<div id='social_media'>
+<h1 id='contact_text'>About me</h1><hr>
+<p id='about_me_text'>If you’ve seen my website, I’d love to know what you think. I’m putting my heart 
+and soul into making this website the best it can be.
+Your thoughts, suggestions, and feedback mean a lot and will help me improve even more!
+Feel free to share your thoughts, suggestions, or just say hi by messaging me</p>
+
+<!-- Email Button -->
+<a href="mailto:harsh.jha.ug23@nsut.ac.in" target="_blank">
+  <button class="email-btn">Email Me</button>
+</a>
+
+<!-- Instagram Button -->
+<a href="https://instagram.com/artbyshinchan0708" target="_blank">
+  <button class="insta-btn">Message on Instagram</button>
+</a>
+
+<!-- WhatsApp Button -->
+<a href="https://wa.me/917042834496" target="_blank">
+  <button class="whatsapp-btn">Chat on WhatsApp</button>
+</a>
+
+<!-- Phone Button -->
+<a href="tel:+917042834496">
+  <button class="call-btn">Call Me</button>
+</a>
+
+<style>
+  button {
+    color: white;
+    padding: 12px 20px;
+    margin: 8px 5px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .email-btn {
+    background-color: #4285F4; /* Google Blue */
+  }
+
+  .insta-btn {
+    background-color: #C13584; /* Instagram Pink */
+  }
+
+  .whatsapp-btn {
+    background-color: #25D366; /* WhatsApp Green */
+  }
+
+  .call-btn {
+    background-color: #0b8457; /* Phone Call Green */
+  }
+
+  button:hover {
+    opacity: 0.85;
+  }
+  
+</style>
+</div>
+
+
+</footer>
+</body>
+</html>
