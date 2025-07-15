@@ -4,710 +4,950 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gada Electronics - Washing Machines</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    /* Base Styles */
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    :root {
+      --primary: #1028e5;
+      --secondary: #e53935;
+      --dark: #1a1a1a;
+      --light: #f8f9fa;
+      --gray: #6c757d;
     }
     
     body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
+      background-color: #f5f5f5;
       color: #333;
-      padding: 0;
-      margin: 0;
-    }
-    
-    a {
-      text-decoration: none;
-      color: inherit;
+      line-height: 1.6;
     }
     
     /* Header Styles */
     header {
-      width: 100%;
-      padding: 10px 20px;
+      background: linear-gradient(135deg, var(--primary), #0d1fb8);
+      color: white;
+      padding: 15px 5%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background-color: #f8f8f8;
-      border-bottom: 1px solid #ddd;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
     
-    #brand {
-      font-size: 24px;
-      font-style: italic;
-      color: #1028e5;
-      font-weight: bold;
-    }
-    
-    #tag_line {
-      font-weight: bold;
-      font-size: 18px;
-    }
-    
-    /* Navigation Styles */
-    nav {
-      width: 100%;
-      background-color: red;
-      padding: 15px;
-    }
-    
-    #search_form {
+    .brand {
       display: flex;
-      margin-bottom: 15px;
-      width: 100%;
-    }
-    
-    #search {
-      flex-grow: 1;
-      padding: 10px;
-      font-size: 16px;
-      border: none;
-    }
-    
-    #submit {
-      padding: 10px 20px;
-      background-color: #1028e5;
-      color: white;
-      border: none;
-      cursor: pointer;
-      margin-left: 5px;
-    }
-    
-    #menu_table {
-      width: 100%;
-      overflow-x: auto;
-      white-space: nowrap;
-    }
-    
-    #menu_table tr {
-      display: inline-block;
-    }
-    
-    #menu {
-      background-color: white;
-      text-align: center;
-      font-size: 14px;
-      font-weight: bold;
-      padding: 8px 12px;
-      margin-right: 5px;
-      border-radius: 4px;
-      display: inline-block;
-    }
-    
-    #menu:hover {
-      background-color: #f0f0f0;
-    }
-    
-    /* Main Content Styles */
-    section {
-      width: 100%;
-      padding: 20px;
-      border: 1px solid red;
-    }
-    
-    address {
-      font-style: normal;
-      margin: 10px 0;
-      padding: 10px;
-      background-color: #f8f8f8;
-      border-radius: 4px;
-    }
-    
-    #location, #contact {
-      width: 100%;
-      font-weight: bold;
-      font-size: 16px;
-      float: none;
-      margin: 10px 0;
-    }
-    
-    /* Product Display Styles */
-    .product-container {
-      display: flex;
-      flex-direction: column;
-      margin-top: 20px;
-    }
-    
-    #popular_tv {
-      width: 100%;
-      background-color: black;
-      padding: 20px;
-      margin-bottom: 20px;
-    }
-    
-    #tony_tv {
-      color: white;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    
-    .product-images {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      align-items: center;
       gap: 10px;
     }
     
-    .product-images img {
-      width: calc(50% - 10px);
-      max-width: 200px;
-      height: auto;
-      margin-bottom: 10px;
+    .brand-icon {
+      font-size: 2rem;
+      color: #ffcc00;
     }
     
-    #rate_list_box {
-      width: 100%;
-      margin-bottom: 30px;
-    }
-    
-    #tv_name, #tv_price {
-      height: auto;
-      background-color: black;
-      color: white;
-      text-align: center;
-      font-weight: bold;
-      font-size: 18px;
-      padding: 10px;
-    }
-    
-    #tv_content {
-      background-color: blue;
-      padding: 10px;
-    }
-    
-    #t_name {
-      font-weight: bold;
+    .brand-text {
+      font-size: 1.8rem;
+      font-weight: 700;
       font-style: italic;
-      font-family: sans-serif;
-      font-size: 16px;
-      padding: 8px;
-      border-bottom: 2px solid white;
-      color: white;
     }
     
-    #rate {
-      list-style: none;
+    .tag-line {
+      font-size: 1.2rem;
+      font-weight: 600;
+      display: none;
     }
     
-    /* Order Form Styles */
-    fieldset {
-      width: 100%;
-      padding: 15px;
-      margin: 20px 0;
-      border: 1px solid #ccc;
+    /* Navigation */
+    nav {
+      background: var(--secondary);
+      padding: 15px 5%;
+      position: sticky;
+      top: 70px;
+      z-index: 99;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
     
-    legend {
-      font-family: sans-serif;
-      font-size: 24px;
-      font-weight: bold;
-      padding: 0 10px;
-    }
-    
-    #order_online {
-      font-family: sans-serif;
-      font-weight: bold;
-      font-style: italic;
-      font-size: 16px;
-    }
-    
-    #order_input, textarea, select {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border: 1px solid #ccc;
-      font-size: 16px;
-    }
-    
-    textarea {
-      height: 100px;
-    }
-    
-    #submit_button {
-      padding: 10px 20px;
-      margin-top: 10px;
-      font-size: 18px;
-      background-color: pink;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      float: right;
-    }
-    
-    /* About Us Styles */
-    #about_us {
-      width: 100%;
-      padding: 20px;
-      border: 1px solid #ccc;
-      margin: 20px 0;
-    }
-    
-    #about_title {
-      font-family: sans-serif;
-      font-size: 24px;
-      text-align: center;
-      margin-bottom: 15px;
-    }
-    
-    #about_text {
-      text-align: justify;
-      font-family: sans-serif;
-      font-weight: normal;
-      font-size: 16px;
-      line-height: 1.6;
-    }
-    
-    /* More Products Styles */
-    #more_tv {
-      width: 100%;
-      margin: 30px 0;
-    }
-    
-    #more_tv_text {
-      text-align: center;
-      font-family: 'Century Gothic', sans-serif;
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
-    
-    .product-grid {
+    .nav-container {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
+      flex-direction: column;
       gap: 15px;
     }
     
-    .product-card {
-      width: calc(50% - 10px);
-      border: 1px solid #ccc;
+    .search-form {
+      display: flex;
+      width: 100%;
+    }
+    
+    .search-input {
+      flex: 1;
+      padding: 12px 15px;
+      border: none;
+      border-radius: 4px 0 0 4px;
+      font-size: 1rem;
+    }
+    
+    .search-btn {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 0 20px;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+    
+    .search-btn:hover {
+      background: #0a1c9e;
+    }
+    
+    .menu-container {
+      overflow-x: auto;
+      padding-bottom: 5px;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    
+    .menu-container::-webkit-scrollbar {
+      display: none;
+    }
+    
+    .menu-table {
+      display: flex;
+      gap: 8px;
+    }
+    
+    .menu-item {
+      background: white;
+      padding: 8px 15px;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      white-space: nowrap;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      transition: all 0.3s;
+    }
+    
+    .menu-item:hover {
+      background: var(--primary);
+      color: white;
+      transform: translateY(-2px);
+    }
+    
+    /* Main Content */
+    .address-bar {
+      background: white;
+      padding: 15px 5%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .address-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      color: var(--dark);
+    }
+    
+    .address-icon {
+      color: var(--secondary);
+      font-size: 1.2rem;
+    }
+    
+    /* Product Showcase */
+    .product-showcase {
+      padding: 30px 5%;
+    }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 30px;
+      color: var(--dark);
+      font-size: 2rem;
+      position: relative;
+    }
+    
+    .section-title::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: var(--secondary);
+      border-radius: 2px;
+    }
+    
+    .product-container {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+    
+    .product-images {
+      background: var(--dark);
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .product-images h3 {
+      color: white;
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+    }
+    
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 15px;
+    }
+    
+    .image-grid img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 2px solid #444;
+      transition: transform 0.3s;
+    }
+    
+    .image-grid img:hover {
+      transform: scale(1.05);
+    }
+    
+    .product-list {
+      background: var(--primary);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .product-header {
+      display: flex;
+      background: var(--dark);
+    }
+    
+    .product-header-cell {
+      flex: 1;
       padding: 15px;
-      margin-bottom: 15px;
+      text-align: center;
+      color: white;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+    
+    .product-rows {
+      display: flex;
+    }
+    
+    .product-column {
+      flex: 1;
+    }
+    
+    .product-item {
+      padding: 12px 15px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      color: white;
+      font-weight: 500;
+    }
+    
+    /* Order Form */
+    .order-section {
+      padding: 0 5% 30px;
+    }
+    
+    .order-container {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+    
+    .order-form {
+      background: white;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+    
+    .form-title {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: var(--primary);
       text-align: center;
     }
     
-    .product-card img {
-      width: 100%;
-      max-width: 180px;
-      height: auto;
-      margin-bottom: 10px;
+    .form-group {
+      margin-bottom: 20px;
     }
     
-    #buy {
-      padding: 8px 15px;
-      border: 1px solid #ccc;
-      background-color: blue;
+    .form-label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: var(--dark);
+    }
+    
+    .form-input {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 1rem;
+      transition: border 0.3s;
+    }
+    
+    .form-input:focus {
+      border-color: var(--primary);
+      outline: none;
+    }
+    
+    .phone-group {
+      display: flex;
+      gap: 10px;
+    }
+    
+    .country-code {
+      flex: 0 0 120px;
+    }
+    
+    .phone-input {
+      flex: 1;
+    }
+    
+    textarea.form-input {
+      min-height: 120px;
+      resize: vertical;
+    }
+    
+    .submit-btn {
+      background: var(--secondary);
       color: white;
-      border-radius: 4px;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 6px;
+      font-size: 1.1rem;
+      font-weight: 600;
       cursor: pointer;
-      margin: 10px 0;
+      transition: background 0.3s;
+      display: block;
+      margin-left: auto;
     }
     
-    #info {
-      font-weight: bold;
-      margin: 5px 0;
+    .submit-btn:hover {
+      background: #c62828;
     }
     
-    #cost_info {
-      font-size: 16px;
-      color: #333;
-      margin: 5px 0;
+    /* About Section */
+    .about-section {
+      background: white;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     }
     
-    /* Footer Styles */
-    footer {
+    .about-title {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: var(--primary);
+      text-align: center;
+    }
+    
+    .about-text {
+      text-align: justify;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--dark);
+    }
+    
+    /* More Products */
+    .more-products {
+      padding: 30px 5%;
+    }
+    
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 25px;
+    }
+    
+    .product-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+    }
+    
+    .product-card:hover {
+      transform: translateY(-10px);
+    }
+    
+    .product-img {
       width: 100%;
-      background-color: black;
+      height: 180px;
+      object-fit: cover;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .product-info {
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .product-name {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: var(--dark);
+    }
+    
+    .product-price {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--secondary);
+      margin-bottom: 15px;
+    }
+    
+    .buy-btn {
+      background: var(--primary);
       color: white;
-      padding: 30px 20px;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+      width: 100%;
+    }
+    
+    .buy-btn:hover {
+      background: #0a1c9e;
+    }
+    
+    /* Footer */
+    footer {
+      background: var(--dark);
+      color: white;
+      padding: 50px 5% 30px;
     }
     
     .footer-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+    
+    .footer-section h3 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      color: #ffcc00;
+      position: relative;
+      padding-bottom: 10px;
+    }
+    
+    .footer-section h3::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background: var(--secondary);
+    }
+    
+    .contact-details {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
+      flex-direction: column;
+      gap: 15px;
     }
     
-    #contact_us, #social_media {
-      width: 100%;
-      margin-bottom: 30px;
-    }
-    
-    #contact_text {
-      font-size: 24px;
-      font-family: sans-serif;
-      margin-bottom: 15px;
-    }
-    
-    #contact_details {
-      line-height: 1.6;
-      margin-bottom: 10px;
-    }
-    
-    .gif-container {
+    .contact-item {
       display: flex;
-      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 15px;
+    }
+    
+    .contact-icon {
+      color: var(--secondary);
+      font-size: 1.2rem;
+      margin-top: 3px;
+    }
+    
+    .social-icons {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    
+    .social-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #333;
+      display: flex;
+      align-items: center;
       justify-content: center;
-      gap: 10px;
+      color: white;
+      font-size: 1.2rem;
+      transition: all 0.3s;
+    }
+    
+    .social-icon:hover {
+      transform: translateY(-5px);
+      background: var(--primary);
+    }
+    
+    .ad-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
       margin: 20px 0;
     }
     
-    .gif-container img {
-      width: calc(33.33% - 10px);
-      max-width: 186px;
-      height: auto;
-    }
-    
-    #about_me_text {
-      font-size: 16px;
-      margin-bottom: 15px;
-      line-height: 1.6;
+    .ad-gif {
+      width: 180px;
+      height: 180px;
+      border-radius: 8px;
+      background: #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+      font-style: italic;
     }
     
     .social-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
     }
     
     .social-btn {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 15px;
+      border-radius: 6px;
       color: white;
-      padding: 10px 15px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.3s;
+    }
+    
+    .social-btn:hover {
+      transform: translateY(-3px);
+    }
+    
+    .email-btn { background: #4285F4; }
+    .insta-btn { background: #C13584; }
+    .whatsapp-btn { background: #25D366; }
+    .call-btn { background: #0b8457; }
+    
+    .copyright {
       text-align: center;
-      flex-grow: 1;
+      padding-top: 30px;
+      margin-top: 30px;
+      border-top: 1px solid #444;
+      color: #aaa;
     }
     
-    .email-btn {
-      background-color: #4285F4;
-    }
-    
-    .insta-btn {
-      background-color: #C13584;
-    }
-    
-    .whatsapp-btn {
-      background-color: #25D366;
-    }
-    
-    .call-btn {
-      background-color: #0b8457;
-    }
-    
-    /* Media Queries for Larger Screens */
+    /* Responsive Design */
     @media (min-width: 768px) {
-      #tag_line {
-        font-size: 24px;
+      .tag-line {
+        display: block;
       }
       
-      #menu {
-        font-size: 16px;
-        padding: 10px 15px;
+      .nav-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .search-form {
+        width: 300px;
       }
       
       .product-container {
         flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
       }
       
-      #popular_tv {
-        width: 60%;
+      .product-images {
+        flex: 1;
       }
       
-      #rate_list_box {
-        width: 38%;
+      .product-list {
+        flex: 0 0 350px;
       }
       
-      .product-images img {
-        width: calc(33.33% - 10px);
+      .order-container {
+        flex-direction: row;
       }
       
-      .product-card {
-        width: calc(20% - 15px);
+      .order-form {
+        flex: 1;
       }
       
-      #contact_us, #social_media {
-        width: 48%;
+      .about-section {
+        flex: 0 0 400px;
+      }
+      
+      .footer-container {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
     
     @media (min-width: 992px) {
-      #search_form {
-        width: 50%;
-        margin-bottom: 0;
+      .footer-container {
+        grid-template-columns: repeat(3, 1fr);
       }
       
-      .product-images img {
-        width: calc(25% - 10px);
+      .address-bar {
+        padding: 15px 10%;
+      }
+      
+      .product-showcase, 
+      .order-section,
+      .more-products {
+        padding: 30px 10%;
       }
     }
   </style>
 </head>
 <body>
+  <!-- Header -->
   <header>
-    <h1 id="brand">GADA ELECTRONIC</h1>
-    <p id="tag_line">Best Deal on Best Brand</p>
+    <div class="brand">
+      <i class="fas fa-tv brand-icon"></i>
+      <span class="brand-text">GADA ELECTRONIC</span>
+    </div>
+    <p class="tag-line">Best Deal on Best Brand</p>
   </header>
   
+  <!-- Navigation -->
   <nav>
-    <form id="search_form">
-      <input id="search" type="search" name="search" placeholder="Search Here...">
-      <input id="submit" type="submit" name="submit" value="Search">
-    </form>
-    
-    <table id="menu_table">
-      <tr>
-        <td id="menu"><a href="index.html">Home</a></td>
-        <td id="menu"><a href="mobile.html">Mobile</a></td>
-        <td id="menu"><a href="laptop.html">Laptop</a></td>
-        <td id="menu"><a href="index.html#tony_tv">TV</a></td>
-        <td id="menu"><a href="refrigerator.html">Refrigerator</a></td>
-        <td id="menu"><a href="ac.html">Air Conditioner</a></td>
-        <td id="menu"><a href="washing_machine.html">Washing Machine</a></td>
-        <td id="menu"><a href="other_electronics.html">Other electronics</a></td>
-        <td id="menu"><a href="#about_title">About Us</a></td>
-        <td id="menu"><a href="#contact_us">Contact Us</a></td>
-      </tr>
-    </table>
+    <div class="nav-container">
+      <form class="search-form">
+        <input type="search" class="search-input" placeholder="Search for washing machines...">
+        <button type="submit" class="search-btn">Search</button>
+      </form>
+      
+      <div class="menu-container">
+        <div class="menu-table">
+          <a href="index.html" class="menu-item">Home</a>
+          <a href="mobile.html" class="menu-item">Mobile</a>
+          <a href="laptop.html" class="menu-item">Laptop</a>
+          <a href="index.html#tony_tv" class="menu-item">TV</a>
+          <a href="refrigerator.html" class="menu-item">Refrigerator</a>
+          <a href="ac.html" class="menu-item">Air Conditioner</a>
+          <a href="washing_machine.html" class="menu-item active">Washing Machine</a>
+          <a href="other_electronics.html" class="menu-item">Other Electronics</a>
+          <a href="#about" class="menu-item">About Us</a>
+          <a href="#contact" class="menu-item">Contact Us</a>
+        </div>
+      </div>
+    </div>
   </nav>
   
-  <section>
-    <address id="location">Address: 2, Chuim Village Rd, Khar, Union Park, Pali Hill, Mumbai, Maharashtra 40005</address>
-    <address id="contact">Order Online: +91 7042834496, +91 9810530805</address>
+  <!-- Address Bar -->
+  <div class="address-bar">
+    <div class="address-item">
+      <i class="fas fa-map-marker-alt address-icon"></i>
+      <span>2, Chuim Village Rd, Khar, Mumbai, Maharashtra 40005</span>
+    </div>
+    <div class="address-item">
+      <i class="fas fa-phone-alt address-icon"></i>
+      <span>Order Online: +91 7042834496, +91 9810530805</span>
+    </div>
+  </div>
+  
+  <!-- Product Showcase -->
+  <section class="product-showcase">
+    <h2 class="section-title">Popular Washing Machines</h2>
     
     <div class="product-container">
-      <div id="popular_tv">
-        <h1 id="tony_tv">Washing Machines</h1>
-        <div class="product-images">
-          <img src="w1.jpg" alt="washing_machine">
-          <img src="w2.jpg" alt="washing_machine">
-          <img src="w3.jpg" alt="washing_machine">
-          <img src="w4.jpg" alt="washing_machine">
+      <div class="product-images">
+        <h3>Top Models</h3>
+        <div class="image-grid">
+          <img src="https://images.unsplash.com/photo-1626804475297-41608ea09aeb?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=150&w=150" alt="Washing Machine">
+          <img src="https://images.unsplash.com/photo-1626804475297-41608ea09aeb?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=150&w=150" alt="Washing Machine">
+          <img src="https://images.unsplash.com/photo-1626804475297-41608ea09aeb?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=150&w=150" alt="Washing Machine">
+          <img src="https://images.unsplash.com/photo-1626804475297-41608ea09aeb?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=150&w=150" alt="Washing Machine">
         </div>
       </div>
       
-      <table id="rate_list_box">
-        <tr>
-          <td id="tv_name">Washing Machines</td>
-          <td id="tv_price">Price</td>
-        </tr>
-        <tr>
-          <td id="tv_content">
-            <ol>
-              <li id="t_name">Samsung 7kg, Fully</li>
-              <li id="t_name">Voltas Beko fully</li>
-              <li id="t_name">Samsung 7kg Ecobubble</li>
-              <li id="t_name">LG 7Kg, 5 Star</li>
-              <li id="t_name">VW 7,5kg, 5 star</li>
-              <li id="t_name">Godrej 6kg,Ecowash</li>
-              <li id="t_name">Godrej 7kg 5 Star</li>
-              <li id="t_name">Samsung 9.5kg</li>
-              <li id="t_name">Haier 6kg</li>
-            </ol>
-          </td>
-          <td id="tv_content">
-            <ol id="rate">
-              <li id="t_name">₹15,290</li>
-              <li id="t_name">₹12,990</li>
-              <li id="t_name">₹17,990</li>
-              <li id="t_name">₹11,490</li>
-              <li id="t_name">₹6,999</li>
-              <li id="t_name">₹22,790</li>
-              <li id="t_name">₹9,890</li>
-              <li id="t_name">₹14,990</li>
-              <li id="t_name">₹12,490</li>
-            </ol>
-          </td>
-        </tr>
-      </table>
-    </div>
-    
-    <fieldset id="form_box">
-      <legend>Order Online</legend>
-      <form id="order_online">
-        Buyer Name
-        <input type="text" name="name" placeholder="Enter Your Full Name..." pattern="[A-Za-z\s]+" title="Only alphabets allowed" id="order_input" required>
-        <br><br>
-        
-        <label for="countryCode">Country Code:</label>
-        <select id="countryCode" name="countryCode" id="order_input" required>
-          <option value="+91">🇮🇳 India (+91)</option>
-          <option value="+1">🇺🇸 United States (+1)</option>
-          <option value="+44">🇬🇧 United Kingdom (+44)</option>
-          <option value="+61">🇦🇺 Australia (+61)</option>
-          <option value="+81">🇯🇵 Japan (+81)</option>
-          <option value="+49">🇩🇪 Germany (+49)</option>
-          <option value="+86">🇨🇳 China (+86)</option>
-          <option value="+33">🇫🇷 France (+33)</option>
-          <option value="+39">🇮🇹 Italy (+39)</option>
-          <option value="+7">🇷🇺 Russia (+7)</option>
-          <option value="+34">🇪🇸 Spain (+34)</option>
-          <option value="+55">🇧🇷 Brazil (+55)</option>
-          <option value="+27">🇿🇦 South Africa (+27)</option>
-          <option value="+82">🇰🇷 South Korea (+82)</option>
-          <option value="+65">🇸🇬 Singapore (+65)</option>
-          <option value="+60">🇲🇾 Malaysia (+60)</option>
-          <option value="+966">🇸🇦 Saudi Arabia (+966)</option>
-          <option value="+971">🇦🇪 UAE (+971)</option>
-          <option value="+62">🇮🇩 Indonesia (+62)</option>
-          <option value="+234">🇳🇬 Nigeria (+234)</option>
-          <option value="+20">🇪🇬 Egypt (+20)</option>
-          <option value="+351">🇵🇹 Portugal (+351)</option>
-          <option value="+48">🇵🇱 Poland (+48)</option>
-          <option value="+90">🇹🇷 Turkey (+90)</option>
-          <option value="+98">🇮🇷 Iran (+98)</option>
-          <option value="+977">🇳🇵 Nepal (+977)</option>
-          <option value="+880">🇧🇩 Bangladesh (+880)</option>
-          <option value="+94">🇱🇰 Sri Lanka (+94)</option>
-          <option value="+92">🇵🇰 Pakistan (+92)</option>
-          <option value="+66">🇹🇭 Thailand (+66)</option>
-        </select>
-        <br><br>
-        
-        <label for="phoneNumber">Mobile Number:</label>
-        <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10}" title="Enter a 10-digit mobile number" id="order_input" required>
-        <br><br>
-        
-        Choose Washing Machine
-        <select name="choose_tv" placeholder="Choose W.M." id="order_input" required>
-          <option value="Samsung 7kg, Fully">Samsung 7kg, Fully</option>
-          <option value="Voltas Beko fully">Voltas Beko fully</option>
-          <option value="Samsung 7kg Ecobubble">Samsung 7kg Ecobubble</option>
-          <option value="LG 7Kg, 5 Star">LG 7Kg, 5 Star</option>
-          <option value="VW 7,5kg, 5 star">VW 7,5kg, 5 star</option>
-          <option value="Godrej 6kg,Ecowash">Godrej 6kg,Ecowash</option>
-          <option value="Godrej 7kg 5 Star">Godrej 7kg 5 Star</option>
-          <option value="Samsung 9.5kg">Samsung 9.5kg</option>
-          <option value="Haier 6kg">Haier 6kg</option>
-          <option value="LG 9kg">LG 9kg</option>
-          <option value="Washer With Dryer">Washer With Dryer</option>
-          <option value="Samsung 12kg">Samsung 12kg</option>
-          <option value="LG 14 Place">LG 14 Place</option>
-          <option value="LG 15Kg">LG 15Kg</option>
-        </select>
-        <br><br>
-        
-        Quantity
-        <input type="number" name="quantity" id="order_input" min="1" required>
-        <br><br>
-        
-        Address<br>
-        <textarea name="address" placeholder="Please enter the address where you'd like your order to be delivered." required></textarea>
-        
-        <input type="submit" value="Order Now!" id="submit_button" onclick="return validatePhoneNumber()">
-      </form>
-    </fieldset>
-    
-    <div id="about_us">
-      <h1 id="about_title">About Us</h1>
-      <hr>
-      <p id="about_text">Welcome to Gada Electronics – jahan har electronic item ke saath ek kahaani judi hoti hai! Shuruat hui ek choti si dukaan se, aur bapuji ke aashirwad se itni badi sakh hui hai gada electronic ki dukan ki iss electronic market me jaha TVs, fridge, phones, laptop, aur remote control se leke customer ke patience tak – sab kuch milta hai with A1 customer service Humein fakr hai ki hum sirf electronics nahi bechte, hum purani yaadon aur naye innovations ka perfect short circuit banate hain. Toh aaiye, nostalgia ki is dukaan mein ek baar phir welcome – kyunki yahan har device ke saath milti hai ek hasi aur ek dosti!</p>
-    </div>
-    
-    <div id="more_tv">
-      <h1 id="more_tv_text">More Washing Machines</h1>
-      <div class="product-grid">
-        <div class="product-card">
-          <img src="w5.jpg" alt="LG 9kg">
-          <a href="#form_box"><button id="buy">Buy Now</button></a>
-          <p id="info">LG 9kg</p>
-          <p id="cost_info">₹49,990</p>
+      <div class="product-list">
+        <div class="product-header">
+          <div class="product-header-cell">Washing Machines</div>
+          <div class="product-header-cell">Price</div>
         </div>
-        
-        <div class="product-card">
-          <img src="w6.jpg" alt="Washer With Dryer">
-          <a href="#form_box"><button id="buy">Buy Now</button></a>
-          <p id="info">Washer With Dryer</p>
-          <p id="cost_info">₹12,95,000</p>
-        </div>
-        
-        <div class="product-card">
-          <img src="w7.jpg" alt="Samsung 12kg">
-          <a href="#form_box"><button id="buy">Buy Now</button></a>
-          <p id="info">Samsung 12kg</p>
-          <p id="cost_info">₹46,990</p>
-        </div>
-        
-        <div class="product-card">
-          <img src="w8.jpg" alt="LG 14 Place">
-          <a href="#form_box"><button id="buy">Buy Now</button></a>
-          <p id="info">LG 14 Place</p>
-          <p id="cost_info">₹55,990</p>
-        </div>
-        
-        <div class="product-card">
-          <img src="w9.jpg" alt="LG 15Kg">
-          <a href="#form_box"><button id="buy">Buy Now</button></a>
-          <p id="info">LG 15Kg</p>
-          <p id="cost_info">₹77,790</p>
+        <div class="product-rows">
+          <div class="product-column">
+            <div class="product-item">Samsung 7kg, Fully</div>
+            <div class="product-item">Voltas Beko fully</div>
+            <div class="product-item">Samsung 7kg Ecobubble</div>
+            <div class="product-item">LG 7Kg, 5 Star</div>
+            <div class="product-item">VW 7,5kg, 5 star</div>
+            <div class="product-item">Godrej 6kg,Ecowash</div>
+            <div class="product-item">Godrej 7kg 5 Star</div>
+            <div class="product-item">Samsung 9.5kg</div>
+            <div class="product-item">Haier 6kg</div>
+          </div>
+          <div class="product-column">
+            <div class="product-item">₹15,290</div>
+            <div class="product-item">₹12,990</div>
+            <div class="product-item">₹17,990</div>
+            <div class="product-item">₹11,490</div>
+            <div class="product-item">₹6,999</div>
+            <div class="product-item">₹22,790</div>
+            <div class="product-item">₹9,890</div>
+            <div class="product-item">₹14,990</div>
+            <div class="product-item">₹12,490</div>
+          </div>
         </div>
       </div>
     </div>
   </section>
   
-  <footer>
+  <!-- Order Section -->
+  <section class="order-section">
+    <div class="order-container">
+      <div class="order-form">
+        <h3 class="form-title">Order Online</h3>
+        <form>
+          <div class="form-group">
+            <label class="form-label">Buyer Name</label>
+            <input type="text" class="form-input" placeholder="Enter your full name" required>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label">Phone Number</label>
+            <div class="phone-group">
+              <select class="form-input country-code">
+                <option value="+91">🇮🇳 India (+91)</option>
+                <option value="+1">🇺🇸 USA (+1)</option>
+                <option value="+44">🇬🇧 UK (+44)</option>
+                <option value="+81">🇯🇵 Japan (+81)</option>
+              </select>
+              <input type="tel" class="form-input phone-input" placeholder="Mobile number" pattern="[0-9]{10}" required>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label">Choose Washing Machine</label>
+            <select class="form-input" required>
+              <option value="">Select a model</option>
+              <option>Samsung 7kg, Fully</option>
+              <option>Voltas Beko fully</option>
+              <option>Samsung 7kg Ecobubble</option>
+              <option>LG 7Kg, 5 Star</option>
+              <option>VW 7,5kg, 5 star</option>
+              <option>Godrej 6kg,Ecowash</option>
+              <option>Godrej 7kg 5 Star</option>
+              <option>Samsung 9.5kg</option>
+              <option>Haier 6kg</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label">Quantity</label>
+            <input type="number" class="form-input" min="1" value="1" required>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label">Delivery Address</label>
+            <textarea class="form-input" placeholder="Enter your full address" required></textarea>
+          </div>
+          
+          <button type="submit" class="submit-btn">Order Now!</button>
+        </form>
+      </div>
+      
+      <div class="about-section" id="about">
+        <h3 class="about-title">About Us</h3>
+        <p class="about-text">
+          Welcome to Gada Electronics – jahan har electronic item ke saath ek kahaani judi hoti hai! 
+          Shuruat hui ek choti si dukaan se, aur bapuji ke aashirwad se itni badi sakh hui hai gada 
+          electronic ki dukan ki iss electronic market me jaha TVs, fridge, phones, laptop, aur remote 
+          control se leke customer ke patience tak – sab kuch milta hai with A1 customer service. 
+          Humein fakr hai ki hum sirf electronics nahi bechte, hum purani yaadon aur naye innovations 
+          ka perfect short circuit banate hain. Toh aaiye, nostalgia ki is dukaan mein ek baar phir 
+          welcome – kyunki yahan har device ke saath milti hai ek hasi aur ek dosti!
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- More Products -->
+  <section class="more-products">
+    <h2 class="section-title">More Washing Machines</h2>
+    
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1626804475297-41608ea09aeb?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=180&w=220" alt="LG 9kg" class="product-img">
+        <div class="product-info">
+          <h4 class="product-name">LG 9kg</h4>
+          <div class="product-price">₹49,990</div>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1626804475297-41608ea09aeb?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=180&w=220" alt="Washer With Dryer" class="product-img">
+        <div class="product-info">
+          <h4 class="product-name">Washer With Dryer</h4>
+          <div class="product-price">₹12,95,000</div>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1626804475297-41608ea09aeb?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=180&w=220" alt="Samsung 12kg" class="product-img">
+        <div class="product-info">
+          <h4 class="product-name">Samsung 12kg</h4>
+          <div class="product-price">₹46,990</div>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1626804475297-41608ea09aeb?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=180&w=220" alt="LG 14 Place" class="product-img">
+        <div class="product-info">
+          <h4 class="product-name">LG 14 Place</h4>
+          <div class="product-price">₹55,990</div>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1626804475297-41608ea09aeb?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=180&w=220" alt="LG 15Kg" class="product-img">
+        <div class="product-info">
+          <h4 class="product-name">LG 15Kg</h4>
+          <div class="product-price">₹77,790</div>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer id="contact">
     <div class="footer-container">
-      <div id="contact_us">
-        <h1 id="contact_text">Contact Us</h1>
-        <hr>
-        <address id="contact_details"><b>Home Address:</b> C-259 Brij Vihar, Gzb, UP</address>
-        <address id="contact_details"><b>Home Phone Number:</b> +91 7042834496</address>
-        <address id="contact_details"><b>Shop Address:</b> 2, Chuim Village Rd, Khar, Union Park, Pali Hill, Mumbai, Maharashtra 40005</address>
-        <address id="contact_details"><b>Shop Phone Number:</b> +91 9810530805</address>
-        <address id="contact_details"><b>College Name:</b> Netaji Subhash University of Technology</address>
-        <address id="contact_details"><b>Disclaimer:</b> This platform is an unofficial simulation, neither affiliated with Gada Electronics nor any other electronic entity. It has been meticulously crafted solely for educational purposes, fostering knowledge and expertise.</address>
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <div class="contact-details">
+          <div class="contact-item">
+            <i class="fas fa-home contact-icon"></i>
+            <span>Home Address: C-259 Brij Vihar, Gzb, UP</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-phone-alt contact-icon"></i>
+            <span>Home Phone: +91 7042834496</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-store contact-icon"></i>
+            <span>Shop Address: 2, Chuim Village Rd, Khar, Mumbai, Maharashtra 40005</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-phone contact-icon"></i>
+            <span>Shop Phone: +91 9810530805</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-university contact-icon"></i>
+            <span>College: Netaji Subhash University of Technology</span>
+          </div>
+        </div>
+        
+        <div class="social-icons">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+        </div>
       </div>
       
-      <div class="gif-container">
-        <img src="ad3.gif" alt="Advertisement">
-        <img src="ad2.gif" alt="Advertisement">
-        <img src="ad1.gif" alt="Advertisement">
+      <div class="footer-section">
+        <h3>Advertisements</h3>
+        <div class="ad-container">
+          <div class="ad-gif">Advertisement GIF 1</div>
+          <div class="ad-gif">Advertisement GIF 2</div>
+          <div class="ad-gif">Advertisement GIF 3</div>
+        </div>
+        
+        <p class="disclaimer">
+          Disclaimer: This platform is an unofficial simulation, neither affiliated with Gada Electronics 
+          nor any other electronic entity. It has been meticulously crafted solely for educational purposes, 
+          fostering knowledge and expertise.
+        </p>
       </div>
       
-      <div id="social_media">
-        <h1 id="contact_text">About me</h1>
-        <hr>
-        <p id="about_me_text">If you've seen my website, I'd love to know what you think. I'm putting my heart and soul into making this website the best it can be. Your thoughts, suggestions, and feedback mean a lot and will help me improve even more! Feel free to share your thoughts, suggestions, or just say hi by messaging me</p>
+      <div class="footer-section">
+        <h3>About Me</h3>
+        <p>
+          If you've seen my website, I'd love to know what you think. I'm putting my heart 
+          and soul into making this website the best it can be. Your thoughts, suggestions, 
+          and feedback mean a lot and will help me improve even more! Feel free to share your 
+          thoughts, suggestions, or just say hi by messaging me.
+        </p>
         
         <div class="social-buttons">
-          <a href="mailto:harsh.jha.ug23@nsut.ac.in" target="_blank">
-            <button class="social-btn email-btn">Email Me</button>
+          <a href="mailto:harsh.jha.ug23@nsut.ac.in" class="social-btn email-btn">
+            <i class="fas fa-envelope"></i> Email Me
           </a>
-          
-          <a href="https://instagram.com/artbyshinchan0708" target="_blank">
-            <button class="social-btn insta-btn">Instagram</button>
+          <a href="https://instagram.com/artbyshinchan0708" target="_blank" class="social-btn insta-btn">
+            <i class="fab fa-instagram"></i> Instagram
           </a>
-          
-          <a href="https://wa.me/917042834496" target="_blank">
-            <button class="social-btn whatsapp-btn">WhatsApp</button>
+          <a href="https://wa.me/917042834496" target="_blank" class="social-btn whatsapp-btn">
+            <i class="fab fa-whatsapp"></i> WhatsApp
           </a>
-          
-          <a href="tel:+917042834496">
-            <button class="social-btn call-btn">Call Me</button>
+          <a href="tel:+917042834496" class="social-btn call-btn">
+            <i class="fas fa-phone-alt"></i> Call Me
           </a>
         </div>
       </div>
     </div>
+    
+    <div class="copyright">
+      &copy; 2023 Gada Electronics. All rights reserved. | Designed with ❤️ by Harsh
+    </div>
   </footer>
-  
+
   <script>
-    function validatePhoneNumber() {
-      const phoneInput = document.getElementById("phoneNumber").value;
-      const pattern = /^[0-9]{10}$/;
+    // Simple form validation
+    document.querySelector('.order-form form').addEventListener('submit', function(e) {
+      const phoneInput = this.querySelector('.phone-input');
+      const phonePattern = /^[0-9]{10}$/;
       
-      if (!pattern.test(phoneInput)) {
-        alert("Please enter exactly 10 digits for the mobile number.");
-        return false;
+      if (!phonePattern.test(phoneInput.value)) {
+        alert('Please enter a valid 10-digit phone number');
+        e.preventDefault();
       }
-      return true;
-    }
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
   </script>
 </body>
 </html>
