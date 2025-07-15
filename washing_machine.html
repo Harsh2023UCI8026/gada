@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>
 Homepage
 </title>
@@ -382,6 +384,159 @@ font-size:17px;
 color:white;
 }
 
+/* ✅ Tablet Responsive (below 1024px) */
+@media only screen and (max-width: 1024px) {
+  header, nav, section, footer {
+    width: 100%;
+    float: none;
+  }
+
+  #brand, #tag_line {
+    float: none;
+    text-align: center;
+    margin: 10px auto;
+  }
+
+  #search, #submit {
+    width: 90%;
+    float: none;
+    display: block;
+    margin: 10px auto;
+  }
+
+  #menu_table {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+
+  #menu {
+    display: inline-block;
+    width: auto;
+    padding: 5px;
+  }
+
+  #popular_tv, #rate_list_box, fieldset, #about_us {
+    width: 95%;
+    float: none;
+    margin: 10px auto;
+  }
+
+  #mtv, #mtv_end {
+    width: 45%;
+    float: left;
+    margin: 10px;
+  }
+
+  #contact_us, #social_media, #gif {
+    float: none;
+    width: 90%;
+    margin: 10px auto;
+    text-align: center;
+  }
+
+  #gif {
+    display: block;
+    width: 80%;
+    height: auto;
+  }
+
+  .email-btn, .insta-btn, .whatsapp-btn, .call-btn {
+    width: 80%;
+    margin: 8px auto;
+    display: block;
+  }
+}
+
+/* ✅ Mobile Responsive (below 768px) */
+@media only screen and (max-width: 768px) {
+  header, nav, section, footer {
+    width: 100%;
+    float: none;
+  }
+
+  #brand, #tag_line {
+    float: none;
+    text-align: center;
+    display: block;
+    margin: 10px auto;
+  }
+
+  #search, #submit {
+    width: 90%;
+    float: none;
+    display: block;
+    margin: 10px auto;
+  }
+
+  #menu_table {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  #menu {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    font-size: 18px;
+  }
+
+  #popular_tv, #rate_list_box, fieldset, #about_us {
+    width: 95%;
+    float: none;
+    margin: 10px auto;
+  }
+
+  #mtv, #mtv_end {
+    width: 90%;
+    float: none;
+    margin: 15px auto;
+  }
+
+  #tv_images {
+    width: 100%;
+    height: auto;
+  }
+
+  #location, #contact {
+    float: none;
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  #gif {
+    display: none; /* Hides GIFs on mobile to save space */
+  }
+
+  #contact_us, #social_media {
+    float: none;
+    width: 95%;
+    margin: 10px auto;
+    text-align: center;
+  }
+
+  #contact_details {
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+  }
+
+  #about_me_text {
+    font-size: 15px;
+    padding: 10px;
+    text-align: justify;
+  }
+
+  .email-btn, .insta-btn, .whatsapp-btn, .call-btn {
+    width: 90%;
+    margin: 8px auto;
+    display: block;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -711,5 +866,8 @@ Feel free to share your thoughts, suggestions, or just say hi by messaging me</p
 
 
 </footer>
+
+ 
+
 </body>
 </html>
