@@ -1,3 +1,4 @@
+  
 <!DOCTYPE html>
 <html>
 <head>
@@ -398,14 +399,14 @@ color:white;
 
 <table id='menu_table'>
 <tr>
-<td id='menu'><a href='index.html'>Home</a></td>
-<td id='menu'><a href="mobile.html">Mobile</a></td>
-<td id='menu'><a href='laptop.html'>Laptop</a></td>
-<td id='menu'><a href='index.html#tony_tv'>TV</a></td>
-<td id='menu'><a href='refrigerator.html'>Refrigerator</a><td>
-<td id='menu'><a href='ac.html'>Air Conditioner</a></td>
-<td id='menu'><a href="washing_machine.html">Washing Machine</a></td>
-<td id='menu'><a href='other_electronics.html'>Other electronics</a></td>
+<td id='menu'><a href='/'>Home</a></td>
+<td id='menu'><a href='/mobile'>Mobile</a></td>
+<td id='menu'><a href='/laptop'>Laptop</a></td>
+<td id='menu'><a href='/#tony_tv'>TV</a></td>
+<td id='menu'><a href='/refrigerator'>Refrigerator</a><td>
+<td id='menu'><a href='/ac'>Air Conditioner</a></td>
+<td id='menu'><a href='/washing_machine'>Washing Machine</a></td>
+<td id='menu'><a href='/other_electronics'>Other electronics</a></td>
 <td id='menu'><a href="#about_title">About Us</a></td>
 <td id='menu'><a href='#contact_us'>Contact Us</a></td>
 
@@ -709,8 +710,101 @@ Feel free to share your thoughts, suggestions, or just say hi by messaging me</p
   
 </style>
 </div>
-
-
 </footer>
+
+/* ----------- Responsive Code Starts Here ----------- */
+
+@media only screen and (max-width: 1024px) {
+  header, nav, section, footer,
+  #popular_tv, #rate_list_box, fieldset, #about_us,
+  #mtv, #mtv_end, #contact_us, #social_media {
+    width: 100%;
+    float: none;
+  }
+
+  #menu_table {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+
+  #menu {
+    display: inline-block;
+    width: auto;
+    margin: 5px;
+  }
+
+  #gif {
+    display: block;
+    margin: auto;
+  }
+
+  fieldset, #about_us {
+    margin: 20px auto;
+  }
+
+  #tv_images {
+    width: 100%;
+    height: auto;
+  }
+
+  #rate_list_box {
+    margin-top: 30px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #brand, #tag_line, #search, #submit, #menu,
+  #contact_us, #social_media, fieldset, #about_us,
+  #mtv, #mtv_end {
+    float: none;
+    width: 90%;
+    margin: 10px auto;
+    text-align: center;
+  }
+
+  #menu {
+    display: block;
+    width: 100%;
+  }
+
+  #gif {
+    display: none;
+  }
+
+  button {
+    width: 90%;
+    margin: 10px auto;
+    display: block;
+  }
+
+  #popular_tv {
+    margin-left: 0;
+  }
+
+  #tv_images {
+    width: 90%;
+    height: auto;
+    margin: 10px auto;
+    display: block;
+  }
+
+  #rate_list_box {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  textarea,
+  #order_input {
+    width: 100%;
+  }
+
+  #submit_button {
+    float: none;
+    width: 100%;
+    margin: 10px auto;
+  }
+}
+
 </body>
-</html>
+</html
